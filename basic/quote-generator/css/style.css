@@ -1,0 +1,64 @@
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  background: linear-gradient(to left bottom, lightblue, lightpink, lightblue);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  width: calc((100vh) * 0.8);
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  padding: 1.5em;
+  box-shadow: 6px 6px 6px rgb(0 0 0 / 40%);
+}
+.heading {
+  color: brown;
+  font-size: 40px;
+  letter-spacing: 1px;
+}
+.quote {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin: 2em;
+}
+blockquote:before {
+  content: open-quote;
+}
+
+blockquote:after {
+  content: close-quote;
+}
+blockquote:before,
+blockquote:after {
+  display: inline-block;
+  vertical-align: bottom;
+  color: orange;
+  font-size: 4em;
+  top: 0.2em;
+  position: relative;
+}
+.btn {
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 0.55em 2em;
+  background-color: blanchedalmond;
+  border: 1px solid lightcyan;
+  border-radius: 5px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.btn:hover {
+  color: blanchedalmond;
+  background: black;
+  transition: all 1s ease;
+}
