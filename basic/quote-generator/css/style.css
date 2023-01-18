@@ -13,7 +13,7 @@ body {
 }
 .wrapper {
   width: calc((100vh) * 0.8);
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 1);
   border: 1px solid black;
   border-radius: 5px;
   text-align: center;
@@ -34,18 +34,15 @@ blockquote:before {
   content: open-quote;
 }
 
-blockquote:after {
-  content: close-quote;
-}
 blockquote:before,
 blockquote:after {
   display: inline-block;
   vertical-align: bottom;
-  color: orange;
+  color: #000;
   font-size: 4em;
-  top: 0.2em;
   position: relative;
 }
+
 .btn {
   font-size: 1em;
   font-weight: 300;
@@ -61,4 +58,9 @@ blockquote:after {
   color: blanchedalmond;
   background: black;
   transition: all 1s ease;
+}
+.author {
+  font-size: 1.2em;
+  display: flex;
+  justify-content: end;
 }
