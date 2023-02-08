@@ -20,11 +20,28 @@ body {
   height: 100dvh;
   color: white;
 }
+center{
+  display: flex;
+  gap:15px;
+  margin-bottom: 2em;
+}
 center h1 {
   text-transform: uppercase;
   letter-spacing: 5px;
 }
+center .hourFormatToggle{
+  background: transparent;
+  color: white;
+  padding: 0em .67em;
+  cursor: pointer;
+}
 section.clock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section.clock > section{
   display: flex;
 }
 .clock div {
