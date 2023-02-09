@@ -17,7 +17,6 @@ function updateClock(){
     const hours = document.querySelector('.hours');
     const minutes = document.querySelector('.minutes');
     const seconds = document.querySelector('.seconds');
-    const Mseconds = document.querySelector('.Mseconds');
     const ampm = document.querySelector('.ampm');
     
  
@@ -25,17 +24,18 @@ function updateClock(){
     const h = date.getHours();
         const m = date.getMinutes();
         const s = date.getSeconds();
-        const ms = date.getMilliseconds();
+        
 
+    //check hours > 12
+    if(h > 12){
+        h = h -12;
+        ampm = 'Pm'
+    }
     //console.log(hrFormat)
     if(hrFormat === '12Hr'){
-        hours.textContent = h < 12 ? `0${h}` : `0${h -12}`;
+        hours.textContent = h < 10 ? `0${h}` :h;
         minutes.textContent = m < 10 ? `0${m}` : m;
         seconds.textContent = s < 10 ? `0${s}` : s;
-        //Mseconds.textContent = ms < 10 ? `00${ms}` : ms
-        
-        ampm.textContent = h >= 12 ? 'PM' : 'AM';
-     
     }else{
         hours.textContent = h < 12 ? `0${h}` : h;
         minutes.textContent = m < 10 ? `0${m}` : m;
