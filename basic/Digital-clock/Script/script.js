@@ -18,13 +18,18 @@ function updateClock(){
     const minutes = document.querySelector('.minutes');
     const seconds = document.querySelector('.seconds');
     const ampm = document.querySelector('.ampm');
-    
+    const dDate = document.querySelector('.date');
+    const month = document.querySelector('.month');
+    const year = document.querySelector('.year')
  
     const date = new Date();
     const h = date.getHours();
-        const m = date.getMinutes();
-        const s = date.getSeconds();
-        
+    const m = date.getMinutes();
+    const s = date.getSeconds();
+    const d = date.getDate();
+    const mo = date.getMonth();
+    const y = date.getFullYear()
+    const actualMonth = mo + 1;
 
     //check hours > 12
     if(h > 12){
@@ -36,13 +41,18 @@ function updateClock(){
         hours.textContent = h < 10 ? `0${h}` :h;
         minutes.textContent = m < 10 ? `0${m}` : m;
         seconds.textContent = s < 10 ? `0${s}` : s;
+        dDate.textContent = d < 10 ? `0${d}` : d;
+        month.textContent = actualMonth < 10 ? `0${actualMonth}` : actualMonth;
+        year.textContent = y;
     }else{
         hours.textContent = h < 12 ? `0${h}` : h;
         minutes.textContent = m < 10 ? `0${m}` : m;
         seconds.textContent = s < 10 ? `0${s}` : s;
         //Mseconds.textContent = ms < 10 ? `00${ms}` : ms
         ampm.textContent = h >= 12 ? 'PM' : 'AM';
-        
+        dDate.textContent = d < 10 ? `0${d}` : d;
+        month.textContent = actualMonth < 10 ? `0${actualMonth}` : actualMonth;
+        year.textContent = y;
     }
    
 }

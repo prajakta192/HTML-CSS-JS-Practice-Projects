@@ -29,11 +29,18 @@ center h1 {
   text-transform: uppercase;
   letter-spacing: 5px;
 }
-center .hourFormatToggle{
+center select.hrFormat{
+  border: 1px solid black;
   background: transparent;
   color: white;
-  padding: 0em .67em;
+  box-shadow: 4px 4px 4px rgba(0,0,0,.4);
+  outline: none;
   cursor: pointer;
+}
+select.hrFormat:hover{
+  color: black;
+  transform: scale(1.1);
+  transition: all .4s ease;
 }
 section.clock {
   display: flex;
@@ -48,7 +55,7 @@ section.clock > section{
   margin: 5px;
   position: relative;
 }
-section div span {
+section.upadteClock div span {
   width: 100px;
   height: 80px;
   background: slateblue;
@@ -57,9 +64,10 @@ section div span {
   align-items: center;
   font-size: 30px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0.6);
-  border: 1px solid;
+  border: 1px solid #818080;
+    box-shadow: 2px 4px 5px rgb(0 0 0 / 60%)
 }
-section span.text {
+section.upadteClock span.text {
   height: 30px;
   font-size: 15px;
   background: darkblue;
@@ -67,17 +75,27 @@ section span.text {
   letter-spacing: 4px;
   opacity: 0.7;
 }
-section .ampm {
+section.upadteClock .ampm {
   position: absolute;
   bottom: 0;
   width: 60px;
   height: 30px;
   font-size: 20px;
-  cursor: pointer;
   background: transparent;
 }
 section .ampm:hover {
   transition: all 0.5s ease;
   border: #000;
   font-size: large;
+}
+section.updateDMY {
+  justify-content: space-between;
+  align-items: flex-end;
+}
+section.updateDMY div span{
+width:100px;
+height: 100px;
+    display: inline-block;
+    font-size: 2.5rem;
+    text-align: center
 }
