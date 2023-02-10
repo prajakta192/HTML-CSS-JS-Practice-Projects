@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(235 255, 55);
+}
+main {
+  background-color: white;
+  width: 500px;
+  height: 300px;
+  border-radius: 7px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.emoji_section {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  /* background-color: yellow; */
+  display: flex;
+  overflow: hidden;
+}
+.emoji_section > * {
+  margin: 1px;
+  transform: translateX(0);
+  transition: transform 0.2s ease-in;
+}
+.rating_section {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translateX(-50%);
+}
+.rating_section > * {
+  color: lightgray;
+  cursor: pointer;
+}
+.rating_section > *.active {
+  color: gold;
+}
