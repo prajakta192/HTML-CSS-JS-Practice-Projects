@@ -10,26 +10,63 @@
   <body>
     <center>
       <h1>Digital Clock</h1>
+      <select class="hrFormat">
+        <option value="12Hr">12Hr</option>
+        <option value="24Hr">24Hr</option>
+      </select>
     </center>
 
     <main>
       <section class="clock">
+<section class="upadteClock">
         <div>
-          <span class="hour">00</span>
+          <span class="hours"></span>
           <span class="text">Hours</span>
         </div>
         <div>
-          <span class="minutes">00</span>
+          <span class="minutes"></span>
           <span class="text">Minutes</span>
         </div>
         <div>
-          <span class="seconds">00</span>
-          <span class="text">seconds</span>
+          <span class="seconds"></span>
+          <span class="text">Seconds</span>
         </div>
+       <!-- <div>
+          <span class="Mseconds">00</span>
+          <span class="text">MSeconds</span>
+        </div>-->
         <div>
           <span class="ampm">AM</span>
         </div>
+       
       </section>
+      <center>
+        <h6 style="font-size: 2.3rem;margin-top: 2rem;">OF</h6>
+      </center>
+      <section class="updateDMY">
+       
+        <div >
+          <span class="date"></span>
+        </div>
+        <div>
+          <span  class="month"></span>
+        </div>
+        <div>
+          <span class="year"></span>
+        </div>
+      </section>
+    </section>
+    <section>
+      <div class="analog_clock">
+        <div class="seconds_hand"></div>
+        <div class="minutes_hand"></div>
+        <div class="hours_hand"></div>
+        <div class="center"></div>
+
+      </div>
+    </section>
     </main>
+
+    <script src="script/script.js" async></script>
   </body>
 </html>
