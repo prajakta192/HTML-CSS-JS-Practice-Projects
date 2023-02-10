@@ -54,7 +54,17 @@ function updateClock(){
         month.textContent = actualMonth < 10 ? `0${actualMonth}` : actualMonth;
         year.textContent = y;
     }
-   
+   //analog clock
+    let secondsHand = document.querySelector('.seconds_hand')
+ let minutesHand = document.querySelector('.minutes_hand')
+ let hoursHand = document.querySelector('.hours_hand')
+    const rotatePerSec = (360/60);
+ // 1min = 60sec for 60sec sechand rotate  in 360deg so for 1sec it rotate 6deg 360/60
+ secondsHand.style.transform = `rotate(${s * rotatePerSec}deg)`;
+    minutesHand.style.transform =`rotate(${m * rotatePerSec + s/10}deg)`;
+    hoursHand.style.transform = `rotate(${h * 30 + m/2}deg)`
+console.log(`rotate(${s * rotatePerSec}deg)`)
+ 
 }
 
 setInterval(() => {
